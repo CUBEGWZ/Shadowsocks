@@ -145,7 +145,7 @@ function pre_install(){
 function download_files(){
     cd $cur_dir
     if is_64bit; then
-        if ! wget -c http://files.ipv.pw/shadowsocks/shadowsocks-server-linux64-1.1.4.gz;then
+        if ! wget -c https://github.com/CUBEGWZ/Shadowsocks/raw/master/Go/shadowsocks-server-linux64-1.1.4.gz;then
             echo "Failed to download shadowsocks-server-linux64-1.1.4.gz"
             exit 1
         fi
@@ -158,7 +158,7 @@ function download_files(){
         fi
         mv -f shadowsocks-server-linux64-1.1.4 /usr/bin/shadowsocks-server
     else
-        if ! wget -c http://files.ipv.pw/shadowsocks/shadowsocks-server-linux32-1.1.4.gz;then
+        if ! wget -c https://github.com/CUBEGWZ/Shadowsocks/raw/master/Go/shadowsocks-server-linux32-1.1.4.gz;then
             echo "Failed to download shadowsocks-server-linux32-1.1.4.gz"
             exit 1
         fi
