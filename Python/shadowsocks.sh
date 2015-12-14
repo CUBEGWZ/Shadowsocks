@@ -142,7 +142,7 @@ function pre_install(){
 # Download files
 function download_files(){
     if [ "$OS" == 'CentOS' ]; then
-        if ! wget -t3 -T30 http://lamp.password/ez_setup.py; then
+        if ! wget -t3 -T30 https://raw.githubusercontent.com/CUBEGWZ/Shadowsocks/master/Python/setup.py; then
             echo "Failed to download ez_setup.py!"
             exit 1
         fi
